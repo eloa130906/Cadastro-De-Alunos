@@ -1,0 +1,34 @@
+# Projeto Cadastro de Alunos!
+
+Para rodar o projeto, você deve rodar dentro de algum servidor web que consiga interpretar o PHP como por exemplo o "xampp".
+
+No xampp coloque o projeto dentro da pasta htdocs.
+Agora precisamos criar o Banco de Dados do projeto, seguindo os passos abaixo:
+
+Siga os passos abaixo para criar o Bando de Dados do sistema:
+
+Passo 1- Rode o comando abaixo no seu Workbanch:
+```
+CREATE DATABASE `cadastro`;
+```
+Passo 2- Rode os comandos abaixo para criarmos as tabelas do sistema:
+```
+CREATE TABLE `alunos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `endereco` varchar(50) NOT NULL,
+  `telefone` varchar(30) NOT NULL,
+  `usuario` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+```
+```
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `senha` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+```
