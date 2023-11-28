@@ -5,14 +5,13 @@ Para rodar o projeto, você deve rodar dentro de algum servidor web que consiga 
 No xampp coloque o projeto dentro da pasta htdocs.
 Agora precisamos criar o Banco de Dados do projeto, seguindo os passos abaixo:
 
-Siga os passos abaixo para criar o Bando de Dados do sistema:
+Execute o comando SQL abaixo para criar o Bando de Dados e as Tabelas do sistema, rode o comando abaixo no seu Workbanch:
 
-Passo 1- Rode o comando abaixo no seu Workbanch:
 ```
+1)
 CREATE DATABASE `cadastro`;
-```
-Passo 2- Rode os comandos abaixo para criarmos as tabelas do sistema:
-```
+
+2)
 CREATE TABLE `alunos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
@@ -22,8 +21,8 @@ CREATE TABLE `alunos` (
   `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-```
-```
+
+3)
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -32,3 +31,5 @@ CREATE TABLE `usuarios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 ```
+
+Agora só acessar no seu navegador localhost para abrir o sistema.
