@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Login | Cadastro de Alunos</title>
+    <title>Login </title>
     <link rel="stylesheet" href="style.css">
 </head>
 
