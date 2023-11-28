@@ -7,11 +7,15 @@ Agora precisamos criar o Banco de Dados do projeto, seguindo os passos abaixo:
 
 Execute o comando SQL abaixo para criar o Bando de Dados e as Tabelas do sistema, rode o comando abaixo no seu Workbanch:
 
-```
-1)
-CREATE DATABASE `cadastro`;
+Comando 1:
 
-2)
+```sh
+CREATE DATABASE `cadastro`;
+```
+
+Comando 2:
+
+```sh
 CREATE TABLE `alunos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(50) NOT NULL,
@@ -21,8 +25,11 @@ CREATE TABLE `alunos` (
   `senha` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+```
 
-3)
+Comando 3:
+
+```sh
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
