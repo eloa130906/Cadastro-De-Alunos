@@ -39,4 +39,6 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 ```
 
-Agora só acessar no seu navegador localhost para abrir o sistema.
+Agora altere no arquivo "conexao.php" as credenciais do seu banco de dados localhost.
+
+Abra seu navegador no endereço localhost do xampp para abrir o sistema e crie seu primeiro usuário clicando em "Cadastrar Login".
