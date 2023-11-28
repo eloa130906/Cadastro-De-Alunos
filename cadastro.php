@@ -43,7 +43,7 @@
     require 'conexao.php';
 
     if (isset($_POST['cadastrar'])) {
-
+        
         if (existe_usuario($_POST['usuario'])) {
             aviso_usuario_existente();
         } else {

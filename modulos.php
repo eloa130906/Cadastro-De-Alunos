@@ -4,8 +4,7 @@
     function existe_usuario($user_post, $excecao = null)
     {
         require 'conexao.php';
-        $dados = $conexao->prepare("SELECT usuario FROM alunos,usuarios;");
-        $dados = $conexao->prepare($query);
+        $dados = $conexao->prepare("SELECT usuario FROM alunos;");
         $dados->execute();
 
         $users = $dados->fetchAll(PDO::FETCH_OBJ);
