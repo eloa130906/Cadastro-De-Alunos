@@ -114,6 +114,22 @@ input[type=submit]:hover {
     font-weight: bold;
 }
 
+.btn-cadastrar {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #fc0000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.btn-cadastrar:hover {
+    background-color: #f75252;
+    font-weight: bold;
+}
 
 
 #aviso-usuario {

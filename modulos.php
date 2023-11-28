@@ -4,8 +4,10 @@
     function existe_usuario($user_post, $excecao = null)
     {
         require 'conexao.php';
-        $dados = $conexao->prepare("SELECT usuario FROM alunos;");
+        $dados = $conexao->prepare("SELECT usuario FROM alunos,usuarios;");
+        $dados = $conexao->prepare($query);
         $dados->execute();
+
         $users = $dados->fetchAll(PDO::FETCH_OBJ);
         foreach($users as $user) {
             if ($user_post == $user->usuario AND $user_post != $excecao) {
@@ -14,7 +16,6 @@
         }
         return false;
     }
-
     function aviso_usuario_existente()
     {
         echo '

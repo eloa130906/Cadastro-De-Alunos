@@ -17,7 +17,7 @@
         if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     ?>
         <div class="container container-login">
-            <form action="" method="POST">
+            <form action="index.php" method="POST">
                 <center>
                     <h2>Sistema Alunos</h2>
                 </center>
@@ -28,7 +28,9 @@
                 <p>Senha<input type="password" name="senha" placeholder="Digite sua senha..."></p>
                 <div id='aviso'></div>
                 <input type="submit" name="entrar" value="Entrar">
-            </form>
+                <a class='btn-cadastrar' href="cadastro_login.php">Cadastrar Login</a>
+        
+            </form> 
         </div>
 
     <?php 
@@ -47,35 +49,28 @@
 
         $usuario = $_POST['usuario'];
         $senha = $_POST['senha'];
-
         setcookie('usuario', $usuario);
 
-        if ($usuario === 'admin@gmail.com' && $senha === 'admin') {
-            $_SESSION['logado'] = true;
-            header('Location: pagina-inicial.php');
-            exit();
-        }
-
-        $dados = $conexao->prepare("SELECT senha, nome FROM alunos WHERE usuario = :usuario;");
-        $dados->bindValue(':usuario', $usuario);
+        $dados = $conexao->prepare("SELECT senha, nome FROM usuarios WHERE email = :email limit 1;");
+        $dados->bindValue(':email', $usuario);
         $dados->execute();
 
         if ($dados->rowCount() > 0) {
-            $senha_bd = $dados->fetchAll(PDO::FETCH_OBJ);
-
-            foreach ($senha_bd as $user) {
-                if (password_verify($senha, $user->senha)) {
-                    echo "Tudo certo!";
-                    setcookie('nome', $user->nome);
-                    $_SESSION['logado'] = true;
-                    header('Location: pagina-inicial.php');
-                    exit();
-                } else {
-                    aviso_usuario_senha_incorretos();
-                }
+            $usuario_bd = $dados->fetch(PDO::FETCH_OBJ);
+            
+           
+            if (password_verify($senha, $usuario_bd->senha)) {
+                setcookie('nome', $usuario_bd->nome);
+                $_SESSION['logado'] = true;
+                header('Location: pagina-inicial.php');
+                exit();
+            } else {
+                aviso_usuario_senha_incorretos();
             }
+        
         } else {
             aviso_usuario_senha_incorretos();
         }
     }
 ?>
+
