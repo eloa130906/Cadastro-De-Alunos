@@ -1,7 +1,12 @@
 <?php
 
+$database = "cadastro";
+$usuario = "root";
+$senha = "root";
+$servidor = "localhost:3307";
+
 try {
-    $conexao = new PDO('mysql:host=localhost:3307; dbname=cadastro', 'root', 'root');
+    $conexao = new PDO("mysql:host={$servidor}; dbname={$database}", $usuario, $senha);
 } catch (Exception $e) {
     echo $e->getMessage();
     echo "<br>";
