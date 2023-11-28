@@ -97,8 +97,12 @@ select {
     box-sizing: border-box;
 }
 
+.btn-content {
+    text-align: center;
+}
+
 input[type=submit] {
-    width: 100%;
+    width: 160px;
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -116,8 +120,8 @@ input[type=submit]:hover {
 
 .btn-cadastrar {
     margin-top: 10px;
-    width: 100%;
-    background-color: #fc0000;
+    width: 160px;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -125,9 +129,10 @@ input[type=submit]:hover {
     border-radius: 4px;
     cursor: pointer;
     font-size: 18px;
+    text-decoration: none;
 }
 .btn-cadastrar:hover {
-    background-color: #f75252;
+    background-color: #45a049;
     font-weight: bold;
 }
 

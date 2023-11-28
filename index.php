@@ -27,9 +27,10 @@
                 } ?>></p>
                 <p>Senha<input type="password" name="senha" placeholder="Digite sua senha..."></p>
                 <div id='aviso'></div>
-                <input type="submit" name="entrar" value="Entrar">
-                <a class='btn-cadastrar' href="cadastro_login.php">Cadastrar Login</a>
-        
+                <div class="btn-content">
+                    <input type="submit" name="entrar" value="Entrar">
+                    <a class='btn-cadastrar' href="cadastro_login.php">Cadastrar Login</a>
+                </div>        
             </form> 
         </div>
 
